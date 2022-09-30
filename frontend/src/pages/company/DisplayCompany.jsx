@@ -37,14 +37,16 @@ const DisplayCompany = () => {
       </Grid>
       {company && company.length > 0 ? (
         <TableContainer component={Paper}>
-          <Table sx={{ width: '100vw' }} aria-label='table'>
+          <Table sx={{ width: '100%' }} aria-label='table'>
             <TableHead>
               <TableRow>
                 <TableCell align='center'>Name</TableCell>
                 <TableCell align='center'>Address</TableCell>
                 <TableCell align='center'>Revenue</TableCell>
                 <TableCell align='center'>Phone</TableCell>
-                <TableCell align='center' colSpan={2}>Details</TableCell>
+                <TableCell align='center' colSpan={2}>
+                  Details
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -65,9 +67,10 @@ const DisplayCompany = () => {
                       View People
                     </Button>
                   </TableCell>
-                  <TableCell align='center'>
+                  <TableCell align='center' colSpan={2}>
                     <Button
                       variant='contained'
+                      sx={{ mx: '10%' }}
                       onClick={() => navigate(`/companies/${company._id}/edit`, { state: { company } })}>
                       Edit
                     </Button>

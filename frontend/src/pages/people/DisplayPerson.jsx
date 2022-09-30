@@ -66,16 +66,17 @@ const DisplayPerson = () => {
                     onClick={() => navigate(`/people/${person._id}/edit`, { state: { person } })}>
                     Edit
                   </Button>
-                </TableCell>
-                <TableCell align='center'>
                   <Button
                     variant='contained'
+                    sx={{mx:'10%'}}
                     onClick={() => {
                       dispatch(deletePerson(person._id));
                       navigate(-1);
                     }}>
                     Delete
                   </Button>
+                </TableCell>
+                <TableCell align='center'>
                 </TableCell>
               </TableRow>
             </TableBody>

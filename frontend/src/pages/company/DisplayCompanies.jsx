@@ -64,7 +64,7 @@ const DisplayCompanies = () => {
   ];
 
   return (
-    <Box sx={{ height: '100vh', width: '100vw', overflow: 'scroll' }}>
+    <Box sx={{ height: '90vh', width: '100%', overflow: 'scroll' }}>
       <Grid container spacing={2}>
         <Grid item xs={10} sm={10} md={10} sx={{ my: '2vh' }}>
           <Typography>Companies</Typography>
@@ -77,8 +77,6 @@ const DisplayCompanies = () => {
         <DataGrid
           rows={companies}
           columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5]}
           getRowId={(row) => row._id}
         />
       )}

@@ -45,7 +45,7 @@ const DisplayPeople = () => {
       </Grid>
       {people && people.length > 0 ? (
         <TableContainer component={Paper}>
-          <Table sx={{ width: '100vw' }} aria-label='table'>
+          <Table sx={{ width: '100%' }} aria-label='table'>
             <TableHead>
               <TableRow>
                 <TableCell align='center'>Name</TableCell>
